@@ -54,7 +54,7 @@ def answer_question(question, metrics, city="Bengaluru"):
     question = question.lower().strip()
 
     if any(word in question for word in [
-        "where", "location", "city", "study area", "which city"
+        "where", "location", "city", "which city"
     ]):
         return f"Study area: {city}, Karnataka, India."
 
