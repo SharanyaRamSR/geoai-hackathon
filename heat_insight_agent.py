@@ -7,7 +7,7 @@ from knowledge_graph import HEAT_METRICS, PROJECT_AREA
 
 def answer_question(question):
     """Answer questions using the available project results."""
-    question = question.lower()
+    question = question.lower().strip()
 
     mean_temp = HEAT_METRICS["mean_lst_celsius"]
     min_temp = HEAT_METRICS["minimum_lst_celsius"]
@@ -16,6 +16,16 @@ def answer_question(question):
     coverage = HEAT_METRICS["valid_data_coverage_percent"]
     city = PROJECT_AREA["name"]
 
+    # Check location questions first
+    if any(word in question for word in [
+        "where", "location", "city", "study area", "which city"
+    ]):
+        return (
+            f"Study area: {city}, {PROJECT_AREA['state']}, "
+            f"{PROJECT_AREA['country']}."
+        )
+
+    # Temperature questions
     if "mean" in question or "average" in question:
         return f"Mean land surface temperature in {city}: {mean_temp} °C."
 
@@ -25,20 +35,16 @@ def answer_question(question):
     if "maximum" in question or "highest" in question:
         return f"Maximum land surface temperature: {max_temp} °C."
 
-    if "risk" in question or "area" in question:
+    # Heat-risk area questions
+    if "risk" in question or "heat-risk" in question or "area" in question:
         return (
             f"Estimated potential heat-risk area: {risk_area} km². "
             "This is a project estimate, not a health-risk assessment."
         )
 
+    # Data coverage questions
     if "coverage" in question or "valid data" in question:
         return f"Valid satellite-data coverage: {coverage}%."
-
-    if "city" in question or "location" in question or "bengaluru" in question:
-        return (
-            f"Study area: {city}, {PROJECT_AREA['state']}, "
-            f"{PROJECT_AREA['country']}."
-        )
 
     return (
         "I can answer questions about mean, minimum, and maximum "
