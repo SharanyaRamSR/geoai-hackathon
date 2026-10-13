@@ -114,11 +114,31 @@ def answer_question(question, metrics, city="Bengaluru"):
         m = metrics["Total Study Area"]
         return f"Total study area: {m['value']} {m['unit']}."
 
+    
+    if any(word in question for word in [
+        "recommendation", "recommendations", "reduce urban heat",
+        "reduce heat", "what actions", "how to reduce", "solutions"]
+          )
+    
+        return (
+            "General recommendations for reducing urban heat in Bengaluru:\n"
+            "1. Increase urban tree cover and protect existing trees.\n"
+            "2. Create and maintain parks and green spaces.\n"
+            "3. Consider cool roofs and reflective building materials.\n"
+            "4. Use permeable surfaces where suitable.\n"
+            "5. Prioritise shade in streets, bus stops, and pedestrian areas.\n"
+            "6. Use local heat and land-cover data to guide interventions.\n"
+            "These are general planning suggestions, not interventions "
+            "validated by this project's satellite analysis."
+        )
+
     return (
         "I can answer questions about mean, minimum, and maximum "
         "temperature, high-heat area, potential heat-risk area, "
-        "the 90th percentile threshold, data coverage, and study area."
+        "the 90th percentile threshold, data coverage, study area, "
+        "and urban heat recommendations."
     )
+
 
 if __name__ == "__main__":
     try:
