@@ -50,10 +50,11 @@ def get_graph_data(graph):
     return metrics
 
 
+
 def answer_question(question, metrics, city="Bengaluru"):
     question = question.lower().strip()
 
-        if "summary" in question or "overall heat" in question:
+    if "summary" in question or "overall heat" in question:
         summary = [
             ("Mean LST", "Mean LST"),
             ("Minimum LST", "Minimum LST"),
@@ -118,7 +119,6 @@ def answer_question(question, metrics, city="Bengaluru"):
         "temperature, high-heat area, potential heat-risk area, "
         "the 90th percentile threshold, data coverage, and study area."
     )
-
 
 if __name__ == "__main__":
     try:
