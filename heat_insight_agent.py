@@ -53,6 +53,25 @@ def get_graph_data(graph):
 def answer_question(question, metrics, city="Bengaluru"):
     question = question.lower().strip()
 
+        if "summary" in question or "overall heat" in question:
+        summary = [
+            ("Mean LST", "Mean LST"),
+            ("Minimum LST", "Minimum LST"),
+            ("Maximum LST", "Maximum LST"),
+            ("High-Heat Area", "High-Heat Area"),
+            ("Potential Heat-Risk Area", "Potential Heat-Risk Area"),
+            ("Valid Data Coverage", "Valid Data Coverage"),
+        ]
+
+        lines = ["Bengaluru Urban Heat Summary:"]
+        for label, key in summary:
+            metric = metrics[key]
+            lines.append(
+                f"{label}: {metric['value']} {metric['unit']}"
+            )
+
+        return "\n".join(lines)
+
     if any(word in question for word in [
         "where", "location", "city", "which city"
     ]):
