@@ -118,7 +118,7 @@ def answer_question(question, metrics, city="Bengaluru"):
     if any(word in question for word in [
         "recommendation", "recommendations", "reduce urban heat",
         "reduce heat", "what actions", "how to reduce", "solutions"]
-          )
+          ):
     
         return (
             "General recommendations for reducing urban heat in Bengaluru:\n"
