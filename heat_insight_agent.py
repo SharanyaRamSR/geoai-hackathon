@@ -103,7 +103,7 @@ def answer_question(question, metrics, city="Bengaluru"):
         m = metrics["High-Heat Area"]
         return f"High-heat area: {m['value']} {m['unit']}."
 
-    if "risk" in question or ("area" in question and "total" not in question):
+    if "risk" in question or "potential heat-risk area" in question:
         m = metrics["Potential Heat-Risk Area"]
         return (
             f"Estimated potential heat-risk area: "
