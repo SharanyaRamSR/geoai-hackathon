@@ -102,10 +102,45 @@ The results depend on satellite data quality, acquisition dates, spatial resolut
 - Incorporate population and land-use information for more detailed heat-risk analysis.
 - Expand the AI assistant with evidence-grounded answers and interactive geospatial insights.
 
+## Setup and Installation
+
+### Requirements
+
+- Python 3.10 or later
+- A FalkorDB instance with the project knowledge graph configured
+- FalkorDB connection credentials
+
+### Install Dependencies
+
+Install the required Python packages using:
+
+``` pip install -r requirements.txt```
+
+### Configure Connection
+
+#### Set the following environment variables using your FalkorDB connection details:
+
+- "FALKORDB_HOST"
+- "FALKORDB_PASSWORD"
+- "FALKORDB_USERNAME"
+- "FALKORDB_PORT"
+
+#### Do not publish passwords or other secrets in the repository.
+
+### Run the Heat Insight Agent
+
+#### Run the following command from the project directory:
+
+``` python heat_insight_agent.py ```
+
+#### The agent connects to FalkorDB and answers supported questions using the stored Bengaluru urban heat metrics.
+
 ## Conclusion
 
 Bengaluru Urban Heat Island Detection Using GeoAI demonstrates a workflow for combining satellite-derived temperature analysis with graph-based knowledge and AI-assisted interpretation. The project aims to support more accessible, data-informed understanding of urban heat patterns.
 
 ---
-Project Domain: GeoAI | Remote Sensing | GIS | Artificial Intelligence | Knowledge Graphs
-Study Area: Bengaluru, Karnataka, India
+## Project Domain: 
+GeoAI | Remote Sensing | GIS | Artificial Intelligence | Knowledge Graphs
+## Study Area: 
+Bengaluru, Karnataka, India
