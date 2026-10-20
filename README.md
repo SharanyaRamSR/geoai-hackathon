@@ -140,7 +140,5 @@ Install the required Python packages using:
 Bengaluru Urban Heat Island Detection Using GeoAI demonstrates a workflow for combining satellite-derived temperature analysis with graph-based knowledge and AI-assisted interpretation. The project aims to support more accessible, data-informed understanding of urban heat patterns.
 
 ---
-## Project Domain: 
-GeoAI | Remote Sensing | GIS | Artificial Intelligence | Knowledge Graphs
-## Study Area: 
-Bengaluru, Karnataka, India
+## Project Domain: GeoAI | Remote Sensing | GIS | Artificial Intelligence | Knowledge Graphs
+## Study Area: Bengaluru, Karnataka, India
