@@ -1,18 +1,18 @@
-Bengaluru Urban Heat Island Detection Using GeoAI
+# Bengaluru Urban Heat Island Detection Using GeoAI
 
-Project Overview
+## Project Overview
 
 Bengaluru Urban Heat Insight Assistant is a GeoAI project that combines satellite-based remote sensing, geospatial analysis, artificial intelligence, and knowledge graphs to identify high-temperature areas in Bengaluru, Karnataka, India.
 
 The project analyses Land Surface Temperature (LST) to identify potential urban heat hotspots and supports the interpretation of geospatial results through an AI-assisted workflow.
 
-Problem Statement
+## Problem Statement
 
 Rapid urbanisation, reduced vegetation, and changes in land cover can contribute to elevated surface temperatures in cities. Identifying high-heat areas helps researchers, urban planners, and communities better understand urban heat patterns.
 
 This project explores how GeoAI can make satellite-derived heat information easier to analyse and interpret.
 
-Objectives
+## Objectives
 
 - Analyse satellite-derived Land Surface Temperature across Bengaluru.
 - Identify areas with relatively high surface temperatures.
@@ -20,7 +20,7 @@ Objectives
 - Organise relevant project knowledge using a graph database.
 - Develop an AI-assisted interface for answering questions about urban heat insights.
 
-Technology Stack
+## Technology Stack
 
 - Google Earth Engine: Satellite data access and geospatial processing.
 - Google Colab: Python-based analysis and experimentation.
@@ -30,7 +30,7 @@ Technology Stack
 - AI Agent: Interpreting user questions and providing context-aware urban heat insights.
 - GitHub: Project source code and documentation.
 
-Methodology
+## Methodology
 
 1. Study Area Selection: Define Bengaluru as the geographical area of interest.
 2. Satellite Data Processing: Access and process relevant satellite-derived environmental data.
@@ -41,7 +41,32 @@ Methodology
 7. Knowledge Graph Integration: Represent relevant concepts and relationships in FalkorDB.
 8. AI-Assisted Insights: Connect the analysis and knowledge layer to support natural-language exploration of urban heat information.
 
-Key Features
+## Satellite Analysis Results
+
+The project analyses satellite-derived Land Surface Temperature (LST) for Bengaluru, Karnataka, India, using Google Earth Engine and geospatial processing.
+
+### Key Metrics
+
+#### Metric| Result
+Study area| 1,260.31 km²
+Mean LST| 31.65 °C
+Minimum LST| 21.65 °C
+Maximum LST| 42.52 °C
+90th-percentile LST threshold| 34.81 °C
+High-heat area| 118.47 km²
+Potential heat-risk area| 34.68 km²
+Valid satellite-data coverage| 95.01%
+
+### Interpretation
+
+- High-heat area: Area identified using the project's 90th-percentile LST threshold.
+- Potential heat-risk area: A project-specific estimate based on the selected LST, vegetation (NDVI), and built-up (NDBI) criteria.
+- Valid data coverage: The proportion of the study area's pixels with valid LST data after the selected processing and masking steps.
+
+### Important limitation
+Land Surface Temperature is not the same as near-surface air temperature. The potential heat-risk area is an exploratory satellite-derived estimate, not a validated measure of human heat exposure or health risk. Further ground observations and demographic data are needed for a comprehensive heat-risk assessment.
+
+## Key Features
 
 - Satellite-based urban heat analysis.
 - Identification of potential high-heat areas.
@@ -51,19 +76,19 @@ Key Features
 - Graph-based knowledge representation.
 - AI-assisted interpretation of urban heat information.
 
-Expected Impact
+## Expected Impact
 
 The project demonstrates how remote sensing, GIS, knowledge graphs, and AI agents can work together to make urban environmental information more accessible.
 
 Potential applications include urban planning, heat-risk screening, environmental monitoring, and identifying areas for further investigation.
 
-Limitations
+## Limitations
 
 Land Surface Temperature is not the same as near-surface air temperature. A detected hotspot does not, by itself, establish human heat exposure or health risk.
 
 The results depend on satellite data quality, acquisition dates, spatial resolution, processing choices, and the selected hotspot threshold. Additional ground measurements and demographic information would be needed for detailed heat-risk assessment.
 
-Repository Structure
+## Repository Structure
 
 - "README.md" — Project overview and documentation.
 - "geoai_assistant.py" — GeoAI assistant application.
@@ -71,7 +96,7 @@ Repository Structure
 - "heat_insight_agent.py" — Urban heat insight agent.
 - "requirements.txt" — Python dependencies.
 
-Future Improvements
+## Future Improvements
 
 - Integrate additional satellite and environmental datasets.
 - Improve knowledge graph coverage and retrieval.
@@ -79,12 +104,12 @@ Future Improvements
 - Incorporate population and land-use information for more detailed heat-risk analysis.
 - Expand the AI assistant with evidence-grounded answers and interactive geospatial insights.
 
-Conclusion
+## Conclusion
 
 Bengaluru Urban Heat Island Detection Using GeoAI demonstrates a workflow for combining satellite-derived temperature analysis with graph-based knowledge and AI-assisted interpretation. The project aims to support more accessible, data-informed understanding of urban heat patterns.
 
 ---
 
-Project Domain: GeoAI | Remote Sensing | GIS | Artificial Intelligence | Knowledge Graphs
+## Project Domain: GeoAI | Remote Sensing | GIS | Artificial Intelligence | Knowledge Graphs
 
-Study Area: Bengaluru, Karnataka, India
+## Study Area: Bengaluru, Karnataka, India
