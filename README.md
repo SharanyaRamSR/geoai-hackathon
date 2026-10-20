@@ -47,15 +47,14 @@ The project analyses satellite-derived Land Surface Temperature (LST) for Bengal
 
 ### Key Metrics
 
-#### Metric| Result
-Study area| 1,260.31 km²
-Mean LST| 31.65 °C
-Minimum LST| 21.65 °C
-Maximum LST| 42.52 °C
-90th-percentile LST threshold| 34.81 °C
-High-heat area| 118.47 km²
-Potential heat-risk area| 34.68 km²
-Valid satellite-data coverage| 95.01%
+- Study area: 1,260.31 km²
+- Mean LST: 31.65 °C
+- Minimum LST: 21.65 °C
+- Maximum LST: 42.52 °C
+- 90th-percentile LST threshold: 34.81 °C
+- High-heat area: 118.47 km²
+- Potential heat-risk area: 34.68 km²
+- Valid satellite-data coverage: 95.01%
 
 ### Interpretation
 
