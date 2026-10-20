@@ -54,7 +54,8 @@ def get_graph_data(graph):
 def answer_question(question, metrics, city="Bengaluru"):
     question = question.lower().strip()
 
-    if "summary" in question or "overall heat" in question:
+    if any(term in question for term in [
+    "summary", "summery", "overall heat", "overall" ]):
         summary = [
             ("Mean LST", "Mean LST"),
             ("Minimum LST", "Minimum LST"),
