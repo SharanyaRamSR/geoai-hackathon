@@ -62,9 +62,6 @@ The project analyses satellite-derived Land Surface Temperature (LST) for Bengal
 - Potential heat-risk area: A project-specific estimate based on the selected LST, vegetation (NDVI), and built-up (NDBI) criteria.
 - Valid data coverage: The proportion of the study area's pixels with valid LST data after the selected processing and masking steps.
 
-### Important limitation
-Land Surface Temperature is not the same as near-surface air temperature. The potential heat-risk area is an exploratory satellite-derived estimate, not a validated measure of human heat exposure or health risk. Further ground observations and demographic data are needed for a comprehensive heat-risk assessment.
-
 ## Key Features
 
 - Satellite-based urban heat analysis.
@@ -83,9 +80,11 @@ Potential applications include urban planning, heat-risk screening, environmenta
 
 ## Limitations
 
-Land Surface Temperature is not the same as near-surface air temperature. A detected hotspot does not, by itself, establish human heat exposure or health risk.
+Land Surface Temperature (LST) is not the same as near-surface air temperature. A detected hotspot does not, by itself, establish human heat exposure or health risk.
 
-The results depend on satellite data quality, acquisition dates, spatial resolution, processing choices, and the selected hotspot threshold. Additional ground measurements and demographic information would be needed for detailed heat-risk assessment.
+The potential heat-risk area of 34.68 km² is an exploratory, satellite-derived estimate based on the project's selected LST, vegetation (NDVI), and built-up (NDBI) criteria. It is not a validated measure of human heat exposure or health risk.
+
+The results depend on satellite data quality, acquisition dates, spatial resolution, processing choices, and the selected hotspot threshold. Further ground observations and demographic data are needed for a comprehensive heat-risk assessment.
 
 ## Repository Structure
 
@@ -108,7 +107,5 @@ The results depend on satellite data quality, acquisition dates, spatial resolut
 Bengaluru Urban Heat Island Detection Using GeoAI demonstrates a workflow for combining satellite-derived temperature analysis with graph-based knowledge and AI-assisted interpretation. The project aims to support more accessible, data-informed understanding of urban heat patterns.
 
 ---
-
-## Project Domain: GeoAI | Remote Sensing | GIS | Artificial Intelligence | Knowledge Graphs
-
-## Study Area: Bengaluru, Karnataka, India
+Project Domain: GeoAI | Remote Sensing | GIS | Artificial Intelligence | Knowledge Graphs
+Study Area: Bengaluru, Karnataka, India
