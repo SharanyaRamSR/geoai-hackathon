@@ -110,12 +110,12 @@ def answer_question(question, metrics, city="Bengaluru"):
             f"{m['value']} {m['unit']}. "
             "This is a project estimate, not a health-risk assessment."
         )
-
-    if "total" in question or "study area size" in question:
+    if any(term in question for term in [
+    "total", "study area", "area of bengaluru",
+    "size of bengaluru", "how large is bengaluru"]):
         m = metrics["Total Study Area"]
         return f"Total study area: {m['value']} {m['unit']}."
 
-    
     if any(word in question for word in [
         "recommendation", "recommendations", "reduce urban heat",
         "reduce heat", "what actions", "how to reduce", "solutions"]
